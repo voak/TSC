@@ -118,7 +118,9 @@ function neverReturns(): never{
 
 
 //nullable: Cannot be null, this affects uninitialise variables only
-let canBeNull = 12;
+let canBeNull: null | number = 12;
 canBeNull = null;
 let canAlsoBeNull;
 canAlsoBeNull = null;
+
+//Assigning a variable to null before declaration makes the variable of type null not any

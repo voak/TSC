@@ -73,3 +73,9 @@ if (typeof finalValue == 'string') {
 function neverReturns() {
     throw new Error('An error!');
 }
+//nullable: Cannot be null, this affects uninitialise variables only
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull;
+canAlsoBeNull = null;
+//Assigning a variable to null before declaration makes the variable of type null not any
