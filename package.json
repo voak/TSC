@@ -1,0 +1,22 @@
+{
+  "name": "tsc-class",
+  "version": "1.0.0",
+  "description": "Learn tsc",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voak/TSC.git"
+  },
+  "author": "Voak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voak/TSC/issues"
+  },
+  "homepage": "https://github.com/voak/TSC#readme",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}

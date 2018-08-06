@@ -1,0 +1,4 @@
+
+
+#Ignore folder named 'node_modules' -no monitoring or git commit for this
+node_modules/
