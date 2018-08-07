@@ -17,3 +17,15 @@ myself.bankAccount.deposit(3000);
 
 console.log(myself);
 console.log(myself.bankAccount.money);
+
+const maxLevels  = 100;
+console.log(maxLevels);
+
+let variable = "String content";
+
+function reset(){
+    let variable = null;
+    console.log(variable);
+}
+reset();
+console.log(variable);
