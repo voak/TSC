@@ -57,7 +57,12 @@ var userData = {
 var complex = {
     data: [100, 2.99, 10],
     output: function (all) {
-        return this.data;
+        if (all) {
+            return this.data;
+        }
+        else {
+            return [];
+        }
     }
 };
 var complex2;
