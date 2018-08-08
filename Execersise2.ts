@@ -15,4 +15,15 @@ console.log(Math.min(...numbers))
 
 //Exercise4
 let newArray = [55, 20];
-Array.prototype.push(newArray, ...numbers);
+newArray.push(...numbers);
+console.log(newArray);
+
+//Exsercise5
+let testResults: number[] = [3.89, 2.99,1.38];
+let [result1, result2, result3] = testResults;
+console.log(result1, result2, result3);
+
+//Exercise6
+let scientist: {firstName: string, experience: number} = {firstName: 'Will', experience: 12};
+const {firstName, experience} = scientist; 
+console.log(firstName, experience);
