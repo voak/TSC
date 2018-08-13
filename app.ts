@@ -1,7 +1,16 @@
-
-
 /* Types in typescript*/
 /* Let is use for variable delcaration and type assignment*/
+
+
+///<reference path='Classes.ts'/>
+///<reference path='Exerceise1.ts'/>
+///<reference path='Execersise2.ts'/>
+///<reference path='Exercise3.ts'/>
+///<reference path='Namespaces.ts'/>
+///<reference path='Namespaces2.ts'/>
+///<reference path='Namespaces3.ts'/>
+//<reference path='Exerceise1.ts'/>
+//<reference path='Exerceise1.ts'/>
 
 let myName = 'Max';
 //myName = 28; // Will return an error because the the type of my name is string and not number

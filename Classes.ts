@@ -103,6 +103,7 @@ console.log(newProject);
 class OnlyOne {
 
     public static instance: OnlyOne;
+    public readonly prop : string = 'Meant to be readonly';
 
     private constructor(name: string){}
 

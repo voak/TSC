@@ -106,6 +106,7 @@ console.log(newProject);
 //In cases where only a single instance is required, then
 var OnlyOne = /** @class */ (function () {
     function OnlyOne(name) {
+        this.prop = 'Meant to be readonly';
     }
     OnlyOne.getInstance = function () {
         if (!OnlyOne.instance) {

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -117,6 +118,31 @@ var OnlyOne = /** @class */ (function () {
 }());
 //let noinstance = new OnlyOne("The only one"); //Wrong
 var right = OnlyOne.getInstance();
+//Exercise1
+var double = function (value) { return value * 2; };
+console.log(double(10));
+//Exercise4
+var greet2 = function (name) {
+    if (name === void 0) { name = "Default Name"; }
+    console.log(name);
+};
+greet2();
+greet2('Anna');
+//Exercise3
+var numbers = [-3, 33, 38, 5];
+console.log(Math.min.apply(Math, numbers));
+//Exercise4
+var newArray = [55, 20];
+newArray.push.apply(newArray, numbers);
+console.log(newArray);
+//Exsercise5
+var testResults = [3.89, 2.99, 1.38];
+var result1 = testResults[0], result2 = testResults[1], result3 = testResults[2];
+console.log(result1, result2, result3);
+//Exercise6
+var scientist = { firstName: 'Will', experience: 12 };
+var firstName = scientist.firstName, experience = scientist.experience;
+console.log(firstName, experience);
 var bankAccount = {
     money: 2000,
     deposit: function (value) {
@@ -190,31 +216,6 @@ console.log(Name, Age);
 var Name2 = 'Max';
 var greeting = "This is a heading\nI'm " + userName + "\n";
 console.log(greeting);
-//Exercise1
-var double = function (value) { return value * 2; };
-console.log(double(10));
-//Exercise4
-var greet2 = function (name) {
-    if (name === void 0) { name = "Default Name"; }
-    console.log(name);
-};
-greet2();
-greet2('Anna');
-//Exercise3
-var numbers = [-3, 33, 38, 5];
-console.log(Math.min.apply(Math, numbers));
-//Exercise4
-var newArray = [55, 20];
-newArray.push.apply(newArray, numbers);
-console.log(newArray);
-//Exsercise5
-var testResults = [3.89, 2.99, 1.38];
-var result1 = testResults[0], result2 = testResults[1], result3 = testResults[2];
-console.log(result1, result2, result3);
-//Exercise6
-var scientist = { firstName: 'Will', experience: 12 };
-var firstName = scientist.firstName, experience = scientist.experience;
-console.log(firstName, experience);
 //Exercise1 - Creating a class
 var Car = /** @class */ (function () {
     function Car(name) {
@@ -286,12 +287,31 @@ person_.firstName = "Ma";
 console.log(person_.firstName);
 person_.firstName = "Maximilian";
 console.log(person_.firstName);
+// Files can be imported in typescript using thesyntax below 
+// The three forward slashes in front are part of the syntax
+//
+// Namespaces can be nested 
+// Nested namespaces can be handled called directly by name reference or by importing it.
+MyMath.AnotherWithn.printPrompt('Call nested namespace by reference');
+var nested = MyMath.AnotherWithn;
+nested.printPrompt("Print from import");
+var MyMath;
+(function (MyMath) {
+    var PI = 3.14;
+    function calculateCircle(width, length) {
+        return width * length;
+    }
+    MyMath.calculateCircle = calculateCircle;
+})(MyMath || (MyMath = {}));
+console.log(MyMath.calculateCircle(7, 7));
+console.log(PI);
 /*Files can be imported in typescript using thesyntax below
 /// <reference path='namespace2.ts' />
 
 The three forward slashes in front are part of the syntax
 */
 // Namespaces can be nested
+///<reference path='Namespaces2.ts'/>
 var MyMath;
 (function (MyMath) {
     var PI = 3.14;
@@ -312,32 +332,15 @@ var PI = 3.142;
 console.log(MyMath.calculateRectangle(2, 43));
 console.log(PI);
 MyMath.AnotherWithn.printPrompt();
-// Files can be imported in typescript using thesyntax below 
-// The three forward slashes in front are part of the syntax
-//
-// Namespaces can be nested 
-// Nested namespaces can be handled called directly by name reference or by importing it.
-MyMath.AnotherWithn.printPrompt('Call nested namespace by reference');
-var nested = MyMath.AnotherWithn;
-nested.printPrompt("Print from import");
-var MyMath;
-(function (MyMath) {
-    var PI = 3.14;
-    function calculateCircle(width, length) {
-        return width * length;
-    }
-    MyMath.calculateCircle = calculateCircle;
-})(MyMath || (MyMath = {}));
-console.log(MyMath.calculateCircle(7, 7));
 /* Types in typescript*/
 /* Let is use for variable delcaration and type assignment*/
-///<reference path='Classes.ts'/>
 ///<reference path='Exerceise1.ts'/>
 ///<reference path='Execersise2.ts'/>
 ///<reference path='Exercise3.ts'/>
 ///<reference path='Namespaces.ts'/>
 ///<reference path='Namespaces2.ts'/>
 ///<reference path='Namespaces3.ts'/>
+///<reference path='Classes.ts'/>
 //<reference path='Exerceise1.ts'/>
 //<reference path='Exerceise1.ts'/>
 var myName = 'Max';
